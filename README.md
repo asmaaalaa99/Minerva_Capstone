@@ -5,6 +5,12 @@ some collected paper and personal notes relevant to Fake Face Detetection
 
 - [Facebook] [Deepfake Detection Challenge]( https://www.kaggle.com/c/deepfake-detection-challenge/overview )
   - [unofficial github repo](https://github.com/drbh/deepfake-detection-challenge)
+  
+## Papers to replicate 
+
+- [Use of a Capsule Network to Detect Fake Images and Videos] [Deepfake Detection Challenge]( https://www.kaggle.com/c/deepfake-detection-challenge/overview )
+- [unofficial github repo](https://github.com/drbh/deepfake-detection-challenge)
+
 
 ## Study
 
