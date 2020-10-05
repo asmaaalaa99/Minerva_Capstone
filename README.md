@@ -8,8 +8,9 @@ some collected paper and personal notes relevant to Fake Face Detetection
   
 ## Papers to replicate 
 
-- [Use of a Capsule Network to Detect Fake Images and Videos] [Deepfake Detection Challenge]( https://www.kaggle.com/c/deepfake-detection-challenge/overview )
-- [unofficial github repo](https://github.com/drbh/deepfake-detection-challenge)
+- [Use of a Capsule Network to Detect Fake Images and Videos] 
+- [FaceForensics++: Learning to Detect Manipulated Facial Images]
+-[MesoNet: a Compact Facial Video Forgery Detection Network]
 
 
 ## Study
