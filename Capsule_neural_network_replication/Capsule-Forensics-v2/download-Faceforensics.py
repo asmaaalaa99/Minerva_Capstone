@@ -1,11 +1,6 @@
-#!/usr/bin/env python
-""" Downloads FaceForensics++ and Deep Fake Detection public data release
-Example usage:
-    see -h or https://github.com/ondyari/FaceForensics
-"""
-# -*- coding: utf-8 -*-
 import argparse
 import os
+import urllib
 import urllib.request
 import tempfile
 import time
@@ -96,7 +91,7 @@ def parse_args():
 
 
 def download_files(filenames, base_url, output_path, report_progress=True):
-    os.makedirs(output_path)
+    os.makedirs(output_path, exist_ok=True)
     if report_progress:
         filenames = tqdm(filenames)
     for filename in filenames:
@@ -135,14 +130,12 @@ def download_file(url, out_file, report_progress=False):
 
 def main(args):
     # TOS
-    """
     print('By pressing any key to continue you confirm that you have agreed '\
           'to the FaceForensics terms of use as described at:')
     print(args.tos_url)
     print('***')
     print('Press any key to continue, or CTRL-C to exit.')
-    #_ = input('')
-    """
+    _ = input('')
 
     # Extract arguments
     c_datasets = [args.dataset] if args.dataset != 'all' else ALL_DATASETS
@@ -150,7 +143,7 @@ def main(args):
     c_compression = args.compression
     num_videos = args.num_videos
     output_path = args.output_path
-    os.makedirs(output_path, exist_ok = True)
+    os.makedirs(output_path, exist_ok=True)
 
     # Check for special dataset cases
     for dataset in c_datasets:
@@ -259,4 +252,4 @@ def main(args):
 
 if __name__ == "__main__":
     args = parse_args()
-    main(args)
+    main(args)   
