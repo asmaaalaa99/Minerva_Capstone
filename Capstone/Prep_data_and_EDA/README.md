@@ -1,5 +1,5 @@
 ﻿# Data Preprocessing Notebook
-- [Data Preprocessing Notebook](#data-preprocessing-notebook)
+
   - [Introduction](#introduction)
   - [Data structure](#data-structure)
   - [How to Pre-process](#how-to-pre-process)
