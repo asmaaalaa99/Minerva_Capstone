@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../../Volumes/MY PASSPORT"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8"
+	}
+}
