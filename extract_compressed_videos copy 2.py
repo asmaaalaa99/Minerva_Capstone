@@ -12,22 +12,23 @@ import argparse
 import subprocess
 import cv2
 from tqdm import tqdm
-import os.path
 
-from multiprocessing import Process
-
-
+"""
 DATASET_PATHS = {
-    'original': '/Volumes/MY PASSPORT/original_sequences/youtube',
+    'original': 'original_sequences/youtube',
     'Deepfakes': 'manipulated_sequences/Deepfakes',
     'Face2Face': 'manipulated_sequences/Face2Face',
-    'FaceSwap': 'manipulated_sequences/FaceSwap'
+    'FaceSwap': 'manipulated_sequences/FaceSwap',
+    'FaceShifter': 'manipulated_sequences/FaceShifter',
+    'actors': 'manipulated_sequences/FaceShifter'
+}
+"""
+DATASET_PATHS = {'deepfakedetection': 'manipulated_sequences/DeepFakeDetection'
 }
 COMPRESSION = ['c0', 'c23', 'c40']
+data_path = "/Volumes/MY PASSPORT/"
 
-data_path = "/Users/asmaaaly/Minerva_Shit/Capstone/Minerva_Capstone/data"
-
-output_path = "/Users/asmaaaly/Minerva_Shit/Capstone/Minerva_Capstone/extracted"
+output_path = "/Volumes/MY PASSPORT/"
 def extract_frames(data_path, output_path, method='cv2'):
     """Method to extract frames, either with ffmpeg or opencv. FFmpeg won't
     start from 0 so we would have to rename if we want to keep the filenames
@@ -40,7 +41,7 @@ def extract_frames(data_path, output_path, method='cv2'):
                 data_path, join(output_path, '%04d.png')),
             shell=True, stderr=subprocess.STDOUT)
     elif method == 'cv2':
-        reader = cv2.VideoCapture(data_path,cv2.CAP_FFMPEG)
+        reader = cv2.VideoCapture(data_path)
         frame_num = 0
         while reader.isOpened():
             success, image = reader.read()
@@ -64,9 +65,6 @@ def extract_method_videos(data_path, dataset, compression):
         image_folder = video.split('.')[0]
         extract_frames(join(videos_path, video),
                        join(images_path, image_folder))
-
-        
 for dataset in DATASET_PATHS.keys():
-    extract_method_videos(data_path,'original','c40')
- 
+    extract_method_videos(data_path,"deepfakedetection",'c23')
 
