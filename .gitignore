@@ -9,3 +9,4 @@ alternative.ipynb
 download-Faceforensics.py
 capstone.code-workspace
 *.hdf5
+*.csv 
