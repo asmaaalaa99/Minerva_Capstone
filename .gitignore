@@ -10,3 +10,10 @@ download-Faceforensics.py
 capstone.code-workspace
 *.hdf5
 *.csv 
+*.log
+*.txt
+*.pb
+*.npy
+*.index
+*.gz
+*.v2
